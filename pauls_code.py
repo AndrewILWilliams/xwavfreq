@@ -219,6 +219,12 @@ for x in np.arange(144):
 Ispeeds=np.where(I)
 ffteqolrfil[np.where(I)]=ffteqolr[np.where(I)]
 plt.figure()
+
+""" 
+# AILW: Not sure why this is here, 
+# it just replicates np.fft.fftfreq(),
+# and isn't used anywhere...
+
 Ksind=Ks
 Ik=np.where(Ksind>72)[0]
 Ksind[Ik]=144-Ksind[Ik]
@@ -227,6 +233,8 @@ If=np.where(freqsind>0.5)[0]
 freqsind[If]=1-freqsind[If]
 Ksind=np.fft.fftshift(Ksind)
 freqsind=np.fft.fftshift(freqsind)
+"""
+
 filtered=np.fft.ifft2(ffteqolrfil)
 
 print 'slowest'
