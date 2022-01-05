@@ -216,7 +216,10 @@ for x in np.arange(144):
         I[:,x]=0
      if np.abs(Ks[x])>10:
         I[:,x]=0
-Ispeeds=np.where(I)
+
+# AILW: not used, removed
+# Ispeeds=np.where(I)
+
 ffteqolrfil[np.where(I)]=ffteqolr[np.where(I)]
 plt.figure()
 
@@ -269,7 +272,10 @@ for x in np.arange(144):
 
 
 ffteqolrfil=np.zeros_like(ffteqolr)
-Ispeeds=np.where(I)
+
+# AILW: not used, removed
+# Ispeeds=np.where(I)
+
 ffteqolrfil[np.where(I)]=ffteqolr[np.where(I)]
 plt.subplot(1,3,2)
 intermediate.filtered=np.fft.ifft2(ffteqolrfil).real
@@ -301,7 +307,10 @@ for x in np.arange(144):
 
 
 ffteqolrfil=np.zeros_like(ffteqolr)
-Ispeeds=np.where(I)
+
+# AILW: not used, removed 
+# Ispeeds=np.where(I)
+
 ffteqolrfil[np.where(I)]=ffteqolr[np.where(I)]
 plt.subplot(1,3,1)
 fast.filtered=np.fft.ifft2(ffteqolrfil).real
